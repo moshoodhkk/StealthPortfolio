@@ -56,7 +56,9 @@
     <div class="toggle-popUp" :class="{ 'active-popup': isActive }">
       <a href="#home" @click.prevent="scrollToSection('home')">Home</a>
       <a href="#about" @click.prevent="scrollToSection('about')">About</a>
-      <a href="#projects" @click.prevent="scrollToSection('projects')">Projects</a>
+      <a href="#projects" @click.prevent="scrollToSection('projects')"
+        >Projects</a
+      >
       <a href="#experience" @click.prevent="scrollToSection('experience')"
         >Experience</a
       >
@@ -353,6 +355,8 @@ nav a:first-child {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 40px;
+    height: 40px;
   }
 
   .toggle-popUp {
@@ -765,6 +769,8 @@ nav a:first-child {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 40px;
+    height: 40px;
   }
 
   /* Add aria-label for accessibility */
