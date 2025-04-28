@@ -142,13 +142,12 @@ export default {
 .project img {
   width: 30px;
   position: absolute;
-  top: -10px;
-  right: 5px;
+  top: -8px;
+  right: 4px;
 }
 
 .project h3 {
-  font-size: 1.8rem;
-  font-weight: 650;
+  font-size: 1.6rem;
   color: hsl(0 0% 20%);
 }
 
@@ -447,7 +446,7 @@ export default {
 /* Small Mobile (below 430px) */
 @media (max-width: 430px) {
   .project-section {
-    padding: 2rem 0;
+    padding: 3rem 0;
   }
 
   .project-wrapper {
@@ -459,11 +458,12 @@ export default {
   }
 
   .project img {
-    width: 20px;
+    width: 26px;
+    right: -8%;
   }
 
   .project h3 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 
   .project-header p {
@@ -500,6 +500,7 @@ export default {
     width: 140px;
     padding: 10px 0;
     font-size: 15px;
+    color: hsl(0 0% 10%);
   }
 
   .project-image {

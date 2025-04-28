@@ -30,8 +30,8 @@
 
       <div class="about-content">
         <div class="about-header">
-          <h2>About Me</h2>
-          <div><img src="../assets/asset12.png" alt="" /></div>
+          <h3>About Me</h3>
+          <img src="../assets/asset12.png" alt="" />
         </div>
 
         <div class="about-info">
@@ -88,6 +88,7 @@ export default {
 .about-wrapper {
   position: relative;
   padding: 4rem 0 6rem;
+  font-family: "Poppins", sans-serif;
 }
 
 .about-bgimage {
@@ -202,18 +203,17 @@ export default {
   margin-bottom: 1.2rem;
 }
 
-.about-header h2 {
+.about-header h3 {
   word-spacing: 5px;
   font-size: 1.6rem;
-  font-weight: 880;
   color: hsl(0 0% 20%);
 }
 
 .about-header img {
   position: absolute;
   top: -50%;
-  right: -10%;
-  width: 27px;
+  right: -8%;
+  width: 30px;
 }
 
 .about-info {
@@ -225,7 +225,7 @@ export default {
 
 .about-info div {
   font-size: 14.5px;
-  line-height: 1.4;
+  line-height: 1.5;
   color: hsl(0 0% 45%);
 }
 
@@ -1016,17 +1016,16 @@ export default {
     margin-bottom: 1.2rem;
   }
 
-  .about-header h2 {
+  .about-header h3 {
     word-spacing: 5px;
     font-size: 1.6rem;
-    font-weight: 880;
     color: hsl(0 0% 20%);
   }
 
   .about-header img {
     position: absolute;
-    top: -50%;
-    right: -7px;
+    top: -40%;
+    right: -8px;
     width: 26px;
   }
 
@@ -1055,7 +1054,7 @@ export default {
     font-weight: 450;
     font-size: 15px;
     padding: 10px 20px;
-    border-radius: 18px;
+    border-radius: 20px;
     background-color: var(--secondary-color);
     color: #ffff;
     text-decoration: none;
@@ -1078,6 +1077,7 @@ export default {
     font-size: 17px;
     font-weight: 500;
     color: hsl(0 0% 55%);
+    font-family: "Poppins", sans-serif;
   }
 
   .about-follow span {

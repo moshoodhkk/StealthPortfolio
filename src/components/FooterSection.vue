@@ -540,6 +540,17 @@ li:hover {
     color: #ffff;
     background-color: var(--secondary-color);
   }
+
+  .scroll-to-top {
+    bottom: 100px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .scroll-to-top i {
+    font-size: 1.3rem;
+  }
 }
 
 /* screen size 575px */
@@ -881,25 +892,13 @@ li:hover {
 }
 
 /* Responsive styles */
-@media (max-width: 768px) {
-  .scroll-to-top {
-    bottom: 20px;
-    right: 20px;
-    width: 40px;
-    height: 40px;
-  }
-
-  .scroll-to-top i {
-    font-size: 1rem;
-  }
-}
-
 @media (max-width: 480px) {
   .scroll-to-top {
-    bottom: 15px;
+    bottom: 90px;
     right: 15px;
-    width: 35px;
-    height: 35px;
+    width: 45px;
+    height: 45px;
+    padding: 8px;
   }
 }
 </style>
