@@ -10,10 +10,6 @@
 
         <div class="about-experience">
           <img src="../assets/asset13.png" alt="" />
-          <p>
-            2+ Years <br />
-            Experience
-          </p>
         </div>
 
         <div class="circle-wrapper">
@@ -30,8 +26,10 @@
 
       <div class="about-content">
         <div class="about-header">
-          <h3>About Me</h3>
-          <img src="../assets/asset12.png" alt="" />
+          <div class="about-header-text">
+            <h3>About Me</h3>
+            <img src="../assets/asset12.png" alt="" />
+          </div>
         </div>
 
         <div class="about-info">
@@ -172,14 +170,6 @@ export default {
 .about-experience img {
   width: 100%;
 }
-.about-experience p {
-  font-size: 0.8rem;
-  position: absolute;
-  color: #ffff;
-  transform: rotate(-30deg);
-  top: 30%;
-  left: 19%;
-}
 
 .about-pencil {
   position: absolute;
@@ -219,7 +209,7 @@ export default {
 .about-info {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.8rem;
   margin-bottom: 2rem;
 }
 
@@ -277,12 +267,19 @@ export default {
 
 .about-socials {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .about-socials i {
   font-size: 17px;
   color: hsl(0 0% 60%);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.about-socials i:hover {
+  color: var(--secondary-color);
+  transform: translateY(-3px);
 }
 
 /* screen size 991px  */
@@ -364,22 +361,14 @@ export default {
 
   .about-experience {
     position: absolute;
-    top: 5%;
-    right: 2%;
+    top: -5%;
+    right: -3%;
     z-index: 200;
-    width: 28%;
+    width: 32%;
   }
 
   .about-experience img {
     width: 100%;
-  }
-  .about-experience p {
-    font-size: 0.65rem;
-    position: absolute;
-    color: #ffff;
-    transform: rotate(-30deg);
-    top: 33%;
-    left: 19%;
   }
 
   .about-pencil {
@@ -398,36 +387,39 @@ export default {
   }
 
   .about-header {
-    position: relative;
-    gap: 0.5rem;
-    width: 120px;
-    margin-bottom: 1.2rem;
+    width: 100%;
+    margin-bottom: 1rem;
   }
 
-  .about-header h2 {
+  .about-header-text {
+    position: relative;
+    width: 150px;
+    white-space: nowrap;
+  }
+
+  .about-header h3 {
     word-spacing: 5px;
-    font-size: 1.5rem;
-    font-weight: 880;
+    font-size: 1.4rem;
     color: hsl(0 0% 20%);
   }
 
   .about-header img {
     position: absolute;
-    top: -48%;
-    right: -23%;
-    width: 24px;
+    top: -40%;
+    right: 2%;
+    width: 25px;
   }
 
   .about-info {
     display: flex;
     flex-direction: column;
-    gap: 0.7rem;
+    gap: 0.8rem;
     margin-bottom: 1.7rem;
   }
 
   .about-info div {
     font-size: 14px;
-    line-height: 1.4;
+    line-height: 1.5;
     color: hsl(0 0% 45%);
   }
 
@@ -451,19 +443,16 @@ export default {
     text-align: center;
   }
 
-  .about-btn a:hover {
-    background-color: hsla(39, 100%, 47%, 0.8);
-  }
-
   .about-follow {
     display: flex;
-    gap: 0.5rem;
+    gap: 0.6rem;
     flex-shrink: 0;
     align-items: center;
   }
 
   .about-follow p {
-    font-size: 13px;
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
     font-weight: 500;
     color: hsl(0 0% 50%);
   }
@@ -477,7 +466,7 @@ export default {
 
   .about-socials {
     display: flex;
-    gap: 0.6rem;
+    gap: 0.8rem;
   }
 
   .about-socials i {
@@ -518,7 +507,7 @@ export default {
 
   .about-img {
     position: absolute;
-    width: 45px;
+    width: 40px;
     top: 0;
   }
 
@@ -564,22 +553,22 @@ export default {
   }
 
   .about-experience {
-    position: absolute;
-    top: 5%;
+    top: 0%;
     right: 0%;
     z-index: 200;
-    width: 30%;
+    width: 33%;
+    transform: rotate(10deg);
   }
 
   .about-experience img {
     width: 100%;
   }
   .about-experience p {
-    font-size: 0.68rem;
+    font-size: 0.8em;
     position: absolute;
     color: #ffff;
     transform: rotate(-30deg);
-    top: 33%;
+    top: 30%;
     left: 19%;
   }
 
@@ -597,25 +586,27 @@ export default {
     width: 55%;
     height: 100%;
   }
-
   .about-header {
-    position: relative;
-    gap: 0.5rem;
-    width: 120px;
-    margin-bottom: 1.2rem;
+    width: 100%;
+    margin-bottom: 1rem;
   }
 
-  .about-header h2 {
+  .about-header-text {
+    position: relative;
+    width: 120px;
+    white-space: nowrap;
+  }
+
+  .about-header h3 {
     word-spacing: 5px;
-    font-size: 1.4rem;
-    font-weight: 880;
+    font-size: 1.5rem;
     color: hsl(0 0% 20%);
   }
 
   .about-header img {
     position: absolute;
-    top: -50%;
-    right: -15%;
+    top: -35%;
+    right: -24%;
     width: 24px;
   }
 
@@ -634,7 +625,7 @@ export default {
 
   .about-btn {
     display: flex;
-    gap: 0.5rem;
+    gap: 0.7rem;
     align-items: center;
   }
 
@@ -642,29 +633,26 @@ export default {
     font-family: "Poppins", "serif";
     font-weight: 450;
     width: 100px;
-    font-size: 12.5px;
-    padding: 7.5px 0;
+    font-size: 13px;
+    padding: 8px 17px;
     border-radius: 25px;
     background-color: var(--secondary-color);
     color: #ffff;
     text-decoration: none;
     border: none;
     text-align: center;
-  }
-
-  .about-btn a:hover {
-    background-color: hsla(39, 100%, 47%, 0.8);
+    white-space: nowrap;
   }
 
   .about-follow {
     display: flex;
-    gap: 0.5rem;
+    gap: 1rem;
     flex-shrink: 0;
     align-items: center;
   }
 
   .about-follow p {
-    font-size: 15px;
+    font-size: 14.5px;
     font-weight: 500;
     color: hsl(0 0% 55%);
   }
@@ -678,11 +666,11 @@ export default {
 
   .about-socials {
     display: flex;
-    gap: 0.6rem;
+    gap: 0.9rem;
   }
 
   .about-socials i {
-    font-size: 16px;
+    font-size: 16.5px;
     color: hsl(0 0% 60%);
   }
 }
@@ -773,19 +761,11 @@ export default {
     top: 0%;
     right: 17%;
     z-index: 200;
-    width: 19%;
+    width: 20%;
   }
 
   .about-experience img {
     width: 100%;
-  }
-  .about-experience p {
-    font-size: 0.7rem;
-    position: absolute;
-    color: #ffff;
-    transform: rotate(-30deg);
-    top: 33%;
-    left: 22%;
   }
 
   .about-pencil {
@@ -804,23 +784,26 @@ export default {
   }
 
   .about-header {
-    position: relative;
-    gap: 0.5rem;
-    width: 130px;
-    margin-bottom: 1.2rem;
+    width: 100%;
+    margin-bottom: 1rem;
   }
 
-  .about-header h2 {
+  .about-header-text {
+    position: relative;
+    width: 130px;
+    white-space: nowrap;
+  }
+
+  .about-header h3 {
     word-spacing: 5px;
-    font-size: 1.4rem;
-    font-weight: 880;
+    font-size: 1.5rem;
     color: hsl(0 0% 20%);
   }
 
   .about-header img {
     position: absolute;
-    top: -50%;
-    right: -8%;
+    top: -37%;
+    right: -17%;
     width: 24px;
   }
 
@@ -832,14 +815,14 @@ export default {
   }
 
   .about-info div {
-    font-size: 17px;
+    font-size: 16px;
     line-height: 1.4;
     color: hsl(0 0% 45%);
   }
 
   .about-btn {
     display: flex;
-    gap: 0.7rem;
+    gap: 0.9rem;
     align-items: center;
   }
 
@@ -858,19 +841,15 @@ export default {
     white-space: nowrap;
   }
 
-  .about-btn a:hover {
-    background-color: hsla(39, 100%, 47%, 0.8);
-  }
-
   .about-follow {
     display: flex;
-    gap: 0.7rem;
+    gap: 0.8rem;
     flex-shrink: 0;
     align-items: center;
   }
 
   .about-follow p {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
     color: hsl(0 0% 55%);
   }
@@ -884,11 +863,11 @@ export default {
 
   .about-socials {
     display: flex;
-    gap: 0.6rem;
+    gap: 0.9rem;
   }
 
   .about-socials i {
-    font-size: 16px;
+    font-size: 17px;
     color: hsl(0 0% 60%);
   }
 }
@@ -971,13 +950,16 @@ export default {
     width: 100%;
     position: absolute;
     z-index: 100;
-    bottom: -15%;
+    bottom: -8%;
   }
 
   .about-experience {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: 0%;
-    right: 8%;
+    right: 6%;
     z-index: 200;
     width: 26%;
   }
@@ -986,12 +968,12 @@ export default {
     width: 100%;
   }
   .about-experience p {
-    font-size: 0.75rem;
+    font-size: 0.7em;
     position: absolute;
     color: #ffff;
     transform: rotate(-30deg);
-    top: 33%;
-    left: 22%;
+    top: 30%;
+    left: 20%;
   }
 
   .about-pencil {
@@ -1010,23 +992,27 @@ export default {
   }
 
   .about-header {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .about-header-text {
     position: relative;
-    gap: 0.5rem;
-    width: 150px;
-    margin-bottom: 1.2rem;
+    width: 140px;
+    white-space: nowrap;
   }
 
   .about-header h3 {
     word-spacing: 5px;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     color: hsl(0 0% 20%);
   }
 
   .about-header img {
     position: absolute;
-    top: -40%;
+    top: -35%;
     right: -8px;
-    width: 26px;
+    width: 24px;
   }
 
   .about-info {
@@ -1044,7 +1030,7 @@ export default {
 
   .about-btn {
     display: flex;
-    gap: 0.7rem;
+    gap: 0.5rem;
     align-items: center;
     width: 100%;
   }
@@ -1052,8 +1038,8 @@ export default {
   .about-btn a {
     font-family: "Poppins", "serif";
     font-weight: 450;
-    font-size: 15px;
-    padding: 10px 20px;
+    font-size: 14px;
+    padding: 10px 0px;
     border-radius: 20px;
     background-color: var(--secondary-color);
     color: #ffff;
@@ -1074,7 +1060,7 @@ export default {
   }
 
   .about-follow p {
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 500;
     color: hsl(0 0% 55%);
     font-family: "Poppins", sans-serif;
@@ -1093,7 +1079,7 @@ export default {
   }
 
   .about-socials i {
-    font-size: 20px;
+    font-size: 16px;
     color: hsl(0 0% 60%);
   }
 }

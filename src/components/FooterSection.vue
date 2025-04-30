@@ -542,10 +542,12 @@ li:hover {
   }
 
   .scroll-to-top {
-    bottom: 100px;
+    position: fixed;
+    top: 85%;
     right: 20px;
     width: 50px;
     height: 50px;
+    z-index: 1000;
   }
 
   .scroll-to-top i {
@@ -733,7 +735,7 @@ li:hover {
   .header img {
     width: 27px;
     position: absolute;
-    top: -75%;
+    top: -65%;
     right: -12%;
   }
 

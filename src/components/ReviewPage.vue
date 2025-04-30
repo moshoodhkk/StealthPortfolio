@@ -5,8 +5,10 @@
       <div class="items item1">
         <div class="item1-wrapper">
           <div class="item1-header">
-            <h2>Hear what they say about us?</h2>
-            <img src="../assets/asset23.png" alt="" />
+            <div class="item1-header-text">
+              <h2>Hear what they say about us?</h2>
+              <img src="../assets/asset23.png" alt="" />
+            </div>
           </div>
           <p class="item1-feedback">
             We love our client and our clients love us. see all feedback
@@ -153,7 +155,6 @@ export default {
 .item1-header {
   display: flex;
   gap: 2rem;
-  width: 65%;
   position: relative;
   align-items: center;
 }
@@ -161,8 +162,8 @@ export default {
   width: 30px;
   align-self: start;
   position: absolute;
-  right: 0%;
-  top: -23%;
+  right: -10%;
+  top: -43%;
 }
 .item1-header h2 {
   line-height: 1.3;
@@ -342,16 +343,20 @@ export default {
   }
 
   .item1-header {
+    width: 100%;
     display: flex;
-    width: 85%;
-    position: relative;
     align-items: center;
+  }
+
+  .item1-header-text {
+    position: relative;
+    width: 300px;
   }
   .item1-header img {
     width: 28px;
     align-self: start;
     position: absolute;
-    right: 0%;
+    right: -3%;
     top: -23%;
   }
   .item1-header h2 {
@@ -496,10 +501,15 @@ export default {
   }
 
   .item1-header {
+    width: 100%;
     display: flex;
-    width: 85%;
-    position: relative;
     align-items: center;
+    white-space: wrap;
+  }
+
+  .item1-header-text {
+    position: relative;
+    width: 180px;
   }
   .item1-header img {
     width: 28px;
@@ -508,9 +518,10 @@ export default {
     right: 0%;
     top: -23%;
   }
+
   .item1-header h2 {
     line-height: 1.3;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     margin-bottom: 0.5rem;
     margin-right: 15px;
   }
@@ -608,8 +619,8 @@ export default {
   }
 }
 
-/* screen size 575px */
-@media (max-width: 575px) {
+/* screen size 576px */
+@media (max-width: 576px) {
   .reviewpage-wrapper {
     font-family: "Poppins", "serif";
     background-color: hsl(28, 71%, 97%);
@@ -649,19 +660,23 @@ export default {
     flex-direction: column;
     align-items: start;
   }
-
   .item1-header {
+    width: 100%;
     display: flex;
-    width: auto;
-    position: relative;
     align-items: center;
   }
+
+  .item1-header-text {
+    position: relative;
+    width: 270px;
+  }
+
   .item1-header img {
-    width: 29px;
+    width: 24px;
     align-self: start;
     position: absolute;
-    right: -10%;
-    top: -43%;
+    right: -8%;
+    top: -25%;
   }
   .item1-header h2 {
     line-height: 1.3;
@@ -806,16 +821,21 @@ export default {
   }
 
   .item1-header {
+    width: 100%;
     display: flex;
-    width: 85%;
-    position: relative;
     align-items: center;
   }
+
+  .item1-header-text {
+    position: relative;
+    width: 80%;
+  }
+
   .item1-header img {
-    width: 29px;
+    width: 24px;
     align-self: start;
     position: absolute;
-    right: -3%;
+    right: -6%;
     top: -27%;
   }
   .item1-header h2 {

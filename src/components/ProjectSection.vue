@@ -152,7 +152,7 @@ export default {
 }
 
 .project-header p {
-  font-size: 15px;
+  font-size: 14.5px;
   color: hsl(0 0% 35%);
 }
 
@@ -183,7 +183,7 @@ export default {
 }
 
 .project-type {
-  font-size: 16px;
+  font-size: 14.5px;
 }
 
 .project-type + h5 {
@@ -192,7 +192,7 @@ export default {
 }
 
 .project-description {
-  font-size: 15px;
+  font-size: 14.5px;
   margin-bottom: 1rem;
 }
 
@@ -204,13 +204,13 @@ export default {
 }
 
 .visit-site p {
-  font-size: 16px;
+  font-size: 14.5px;
   color: hsl(0 0% 10%);
   font-weight: 500;
 }
 
 .visit-site i {
-  font-size: 16px;
+  font-size: 14.5px;
   color: hsl(0 0% 10%);
 }
 
@@ -266,25 +266,37 @@ export default {
   .project-header {
     width: 70%;
   }
+  .project {
+    width: 140px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0.5rem 0;
+  }
 
+  .project img {
+    width: 25px;
+    position: absolute;
+    top: -5px;
+    right: -8%;
+  }
   .project h3 {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
 
   .project-header p {
-    font-size: 16px;
+    font-size: 14.5px;
   }
 
   .project-type {
-    font-size: 17px;
+    font-size: 14.5px;
   }
 
   .project-type + h5 {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
   .project-description {
-    font-size: 16px;
+    font-size: 14.5px;
     margin-bottom: 0.8rem;
   }
 
@@ -305,75 +317,8 @@ export default {
   }
 }
 
-/* Small Tablet (576px to 767px) */
+/* screen size 768px */
 @media (max-width: 768px) {
-  .project-section {
-    padding: 3rem 0;
-  }
-
-  .project-wrapper {
-    width: 90%;
-  }
-
-  .project-header {
-    width: 100%;
-    margin-bottom: 2rem;
-  }
-
-  .project h3 {
-    font-size: 2.2rem;
-  }
-
-  .project-header p {
-    font-size: 20px;
-  }
-
-  .project-items {
-    flex-direction: column;
-    gap: 4rem;
-  }
-
-  .project-content {
-    width: 100%;
-    order: 2;
-  }
-
-  .project-image {
-    width: 80%;
-    aspect-ratio: 16/9;
-  }
-
-  .project-type {
-    font-size: 22px;
-  }
-
-  .project-type + h5 {
-    font-size: 2.4rem;
-  }
-
-  .project-description {
-    font-size: 22px;
-    margin-bottom: 0.8rem;
-  }
-
-  .visit-site {
-    margin-top: 0.5rem;
-  }
-
-  .project-viewmore {
-    width: 140px;
-    padding: 12px 0;
-    font-size: 20px;
-  }
-
-  .visit-site p,
-  .visit-site i {
-    font-size: 22px;
-  }
-}
-
-/* Mobile (430px to 575px) */
-@media (max-width: 575px) {
   .project-section {
     padding: 2.5rem 0;
   }
@@ -425,7 +370,7 @@ export default {
   }
 
   .project-image {
-    width: 100%;
+    width: 50%;
     aspect-ratio: 16/9;
   }
 
@@ -440,6 +385,93 @@ export default {
     cursor: pointer;
     transition: all 0.3s ease;
     font-size: 14px;
+  }
+}
+
+/* screen size 576px */
+@media (max-width: 576px) {
+  .project-section {
+    padding: 3rem 0;
+  }
+
+  .project-wrapper {
+    width: 90%;
+  }
+
+  .project {
+    width: 140px;
+  }
+
+  .project img {
+    width: 24px;
+  }
+
+  .project-header {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .project h3 {
+    font-size: 1.5rem;
+  }
+
+  .project-header p {
+    font-size: 16px;
+  }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    justify-content: space-between;
+    row-gap: 4rem;
+    margin-bottom: 3rem;
+  }
+
+  .project-items {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .project-image {
+    width: 90%;
+    aspect-ratio: 16/9;
+  }
+
+  .project-type {
+    font-size: 16px;
+  }
+
+  .project-content {
+    width: 100%;
+    order: 2;
+    gap: 0.5rem;
+  }
+
+  .project-type + h5 {
+    font-size: 1.6rem;
+  }
+
+  .project-description {
+    font-size: 16px;
+    margin-bottom: 0.8rem;
+  }
+
+  .visit-site {
+    margin-top: 0.5rem;
+  }
+
+  .visit-site p,
+  .visit-site i {
+    font-size: 15px;
+  }
+
+  .project-viewmore {
+    width: 140px;
+    padding: 12px 0;
+    font-size: 16px;
+    background-color: hsl(0 0% 15%);
+    color: #ffff;
   }
 }
 
@@ -458,16 +490,16 @@ export default {
   }
 
   .project img {
-    width: 26px;
+    width: 24px;
     right: -8%;
   }
 
   .project h3 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 
   .project-header p {
-    font-size: 15px;
+    font-size: 17px;
   }
 
   .project-grid {
@@ -475,11 +507,11 @@ export default {
   }
 
   .project-items {
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
   .project-type {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .project-type + h5 {
@@ -487,20 +519,21 @@ export default {
   }
 
   .project-description {
-    font-size: 14px;
+    font-size: 17px;
     margin-bottom: 0.3rem;
   }
 
   .visit-site p,
   .visit-site i {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .project-viewmore {
     width: 140px;
     padding: 10px 0;
     font-size: 15px;
-    color: hsl(0 0% 10%);
+    background-color: hsl(0 0% 15%);
+    color: #ffff;
   }
 
   .project-image {
