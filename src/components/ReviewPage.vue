@@ -828,14 +828,14 @@ export default {
 
   .item1-header-text {
     position: relative;
-    width: 80%;
+    width: 230px;
   }
 
   .item1-header img {
     width: 24px;
     align-self: start;
     position: absolute;
-    right: -6%;
+    right: 0%;
     top: -27%;
   }
   .item1-header h2 {
