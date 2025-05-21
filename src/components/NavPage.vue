@@ -255,89 +255,124 @@ nav a:first-child {
     margin: 0 auto 2rem;
   }
 
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.8rem 0;
+  .logo {
+    width: 80px;
+    height: 53px;
   }
 
-  .logo {
-    font-family: "Inter", "serif";
-    font-weight: 700;
-    font-size: 22px;
-    letter-spacing: 0.1rem;
-    background: linear-gradient(
-      to bottom right,
-      transparent,
-      hsl(39, 82%, 62%),
-      hsl(39, 87%, 49%)
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 
   nav {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
   }
   nav a:first-child {
     color: hsl(39, 97%, 43%);
   }
 
   nav a {
+    position: relative;
     text-decoration: none;
     color: hsl(0 0% 10%);
     font-family: "Inter", "serif";
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 450;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 5px;
   }
 
   nav a:not(:first-child):hover {
     color: hsl(39, 97%, 43%);
+    background-color: rgba(255, 187, 0, 0.1);
+    transform: translateY(-2px);
   }
 
   nav a:first-child {
     color: hsl(39, 97%, 43%);
+    background-color: rgba(255, 187, 0, 0.1);
   }
 
   .nav-btn {
-    padding: 10px 25px;
+    padding: 12px 27px;
     background-color: transparent;
     border: 1.3px solid black;
     border-radius: 20px;
     cursor: pointer;
+    transition: 0.4s ease-in;
   }
 
-  nav a:not(:first-child)::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 1.5px;
-    background-color: hsl(39, 97%, 43%);
-    bottom: -2px;
-    left: 0;
-    transition: width 0.3s ease;
+  .nav-btn:hover {
+    background-color: hsl(0 0% 10%);
+    color: #ffff;
   }
 
-  nav a:not(:first-child):hover::before {
-    width: 100%;
-  }
-
-  nav a:first-child {
-    color: hsl(39, 97%, 43%);
+  .nav-toggle {
+    z-index: 1001;
+    width: 48px;
+    height: 48px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: none;
     position: relative;
+    transition: all 0.4s ease;
+    border-radius: 50%;
   }
 
-  nav a:first-child::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 1.5px;
-    background-color: hsl(39, 97%, 43%);
-    bottom: -2px;
-    left: 0;
+  .toggle-popUp {
+    display: none;
+  }
+
+  .overlay {
+    display: none;
+  }
+
+  .close-toggle {
+    display: none;
+  }
+
+  .toggle-popUp a:not(.contact-mb) {
+    text-decoration: none;
+    color: hsl(0 0% 10%);
+    font-size: 19px;
+    transition: color 0.3s ease;
+  }
+
+  .toggle-popUp a:first-child:not(.contact-mb) {
+    color: hsl(39, 97%, 43%);
+  }
+
+  .toggle-popUp a:not(:first-child):not(.contact-mb):hover {
+    color: hsl(39, 97%, 43%);
+  }
+
+  .contact-mb {
+    display: block;
+    padding: 10px 35px;
+    background-color: transparent;
+    border: 1.3px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    color: hsl(0 0% 10%);
+    text-decoration: none !important;
+  }
+
+  .contact-mb:hover {
+    background-color: hsl(0 0% 10%);
+    color: #ffff;
+    text-decoration: none;
+  }
+
+  .contact-mb:focus {
+    text-decoration: none;
+    outline: none;
   }
 }
 

@@ -52,15 +52,36 @@
         </div>
 
         <div class="about-btn">
-          <a @click="scrollToContact">Hire Me</a>
+          <a @click="scrollToContact" class="hire-btn">Hire Me</a>
           <div class="about-follow">
             <span></span>
             <p>Follow Me</p>
           </div>
           <div class="about-socials">
-            <i class="fa-brands fa-linkedin-in"></i>
-            <i class="fa-brands fa-github"></i>
-            <i class="fa-brands fa-twitter"></i>
+            <a
+              href="https://www.linkedin.com/in/kazeem-moshood-411ba2333"
+              target="_blank"
+              class="social-links"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+            <a
+              href="https://github.com/moshoodhkk"
+              target="_blank"
+              class="social-links"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/stealth.dev?igsh=MWt5dmQ0a2UxeGM5bA%3D%3D&utm_source=qr"
+              target="_blank"
+              class="social-links"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a
+              href="https://www.tiktok.com/@stealth_dev2?_t=ZM-8wXduPdXazQ&_r=1"
+              target="_blank"
+              class="social-links"
+              ><i class="fa-brands fa-tiktok"></i
+            ></a>
           </div>
         </div>
       </div>
@@ -225,7 +246,7 @@ export default {
   align-items: center;
 }
 
-.about-btn a {
+.hire-btn {
   font-family: "Poppins", "serif";
   font-weight: 450;
   width: 130px;
@@ -241,7 +262,7 @@ export default {
   cursor: pointer;
 }
 
-.about-btn a:hover {
+.hire-btn:hover {
   box-shadow: 0 0 15px 3px rgba(255, 187, 0, 0.3);
   transform: translateY(-2px);
 }
@@ -267,19 +288,25 @@ export default {
 
 .about-socials {
   display: flex;
-  gap: 1.5rem;
+  gap: 0.1rem;
+}
+
+.about-socials .social-links {
+  text-decoration: none;
+  color: hsl(0 0% 60%);
 }
 
 .about-socials i {
   font-size: 17px;
-  color: hsl(0 0% 60%);
-  transition: all 0.3s ease;
+  padding: 7px 7.7px;
+  border-radius: 50%;
+  transition: 0.3s;
   cursor: pointer;
 }
 
-.about-socials i:hover {
-  color: var(--secondary-color);
-  transform: translateY(-3px);
+.about-socials .social-links:hover i {
+  color: #ffff;
+  background-color: var(--secondary-color);
 }
 
 /* screen size 991px  */
@@ -429,7 +456,7 @@ export default {
     align-items: center;
   }
 
-  .about-btn a {
+  .hire-btn {
     font-family: "Poppins", "serif";
     font-weight: 450;
     width: 120px;
@@ -466,12 +493,12 @@ export default {
 
   .about-socials {
     display: flex;
-    gap: 0.8rem;
+    gap: 0.3rem;
   }
 
   .about-socials i {
     font-size: 16px;
-    color: hsl(0 0% 60%);
+    padding: 7px 7.7px;
   }
 }
 
@@ -629,7 +656,7 @@ export default {
     align-items: center;
   }
 
-  .about-btn a {
+  .hire-btn {
     font-family: "Poppins", "serif";
     font-weight: 450;
     width: 100px;
@@ -666,12 +693,12 @@ export default {
 
   .about-socials {
     display: flex;
-    gap: 0.9rem;
+    gap: 0.3rem;
   }
 
   .about-socials i {
     font-size: 16.5px;
-    color: hsl(0 0% 60%);
+    padding: 7px 7.7px;
   }
 }
 
@@ -826,7 +853,7 @@ export default {
     align-items: center;
   }
 
-  .about-btn a {
+  .hire-btn {
     font-family: "Poppins", "serif";
     font-weight: 450;
     width: 120px;
@@ -863,12 +890,12 @@ export default {
 
   .about-socials {
     display: flex;
-    gap: 0.9rem;
+    gap: 0.3rem;
   }
 
   .about-socials i {
     font-size: 17px;
-    color: hsl(0 0% 60%);
+    padding: 7px 7.7px;
   }
 }
 
@@ -1030,16 +1057,16 @@ export default {
 
   .about-btn {
     display: flex;
-    gap: 0.5rem;
+    gap: 0.3rem;
     align-items: center;
     width: 100%;
   }
 
-  .about-btn a {
+  .hire-btn {
     font-family: "Poppins", "serif";
     font-weight: 450;
     font-size: 14px;
-    padding: 10px 0px;
+    padding: 10px 15px;
     border-radius: 20px;
     background-color: var(--secondary-color);
     color: #ffff;
@@ -1049,10 +1076,6 @@ export default {
     white-space: nowrap;
   }
 
-  .about-btn a:hover {
-    background-color: hsla(39, 100%, 47%, 0.8);
-  }
-
   .about-follow {
     display: flex;
     gap: 0.1rem;
@@ -1060,14 +1083,14 @@ export default {
   }
 
   .about-follow p {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
     color: hsl(0 0% 55%);
     font-family: "Poppins", sans-serif;
   }
 
   .about-follow span {
-    width: 40px;
+    width: 35px;
     height: 0.5px;
     display: block;
     background-color: hsl(0 0% 20%);
@@ -1075,12 +1098,13 @@ export default {
 
   .about-socials {
     display: flex;
-    gap: 0.5rem;
+    gap: 0;
+    width: 100px;
   }
 
   .about-socials i {
-    font-size: 16px;
-    color: hsl(0 0% 60%);
+    font-size: 15px;
+    padding: 7px 7.7px;
   }
 }
 </style>

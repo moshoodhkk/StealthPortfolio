@@ -37,7 +37,6 @@
           <span>Phone:</span>
           <p>+234 9032897113</p>
         </div>
-        <!-- <span class="contact-line"></span> -->
         <div class="mail">
           <span>Mail:</span>
           <p>suxces.stealth@outlook.com</p>
@@ -52,57 +51,22 @@
       <div class="socials">
         <i class="fa-brands fa-linkedin-in"></i>
         <i class="fa-brands fa-github"></i>
-        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
       </div>
     </div>
-
-    <!-- Scroll to top button -->
-    <transition name="fade">
-      <button
-        v-show="showScrollButton"
-        @click="scrollToTop"
-        class="scroll-to-top"
-        aria-label="Scroll to top"
-      >
-        <i class="bi bi-arrow-up"></i>
-      </button>
-    </transition>
   </div>
 </template>
 
 <script>
 export default {
   name: "FooterSection",
-  data() {
-    return {
-      showScrollButton: false,
-    };
-  },
   methods: {
-    scrollToTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    },
     scrollToSection(sectionId) {
       const element = document.getElementById(sectionId);
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
       }
     },
-    handleScroll() {
-      // Show button when scrolled to bottom
-      const scrollPosition = window.scrollY + window.innerHeight;
-      const documentHeight = document.documentElement.scrollHeight;
-      this.showScrollButton = scrollPosition >= documentHeight - 100;
-    },
-  },
-  mounted() {
-    window.addEventListener("scroll", this.handleScroll);
-  },
-  beforeUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
   },
 };
 </script>
@@ -540,19 +504,6 @@ li:hover {
     color: #ffff;
     background-color: var(--secondary-color);
   }
-
-  .scroll-to-top {
-    position: fixed;
-    top: 85%;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    z-index: 1000;
-  }
-
-  .scroll-to-top i {
-    font-size: 1.3rem;
-  }
 }
 
 /* screen size 575px */
@@ -844,63 +795,6 @@ li:hover {
     cursor: pointer;
     color: #ffff;
     background-color: var(--secondary-color);
-  }
-}
-
-/* Scroll to top button styles */
-.scroll-to-top {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  background-color: var(--secondary-color);
-  border: none;
-  color: white;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 15px rgba(255, 187, 0, 0.2);
-  transition: all 0.3s ease;
-  z-index: 1000;
-}
-
-.scroll-to-top i {
-  font-size: 1.2rem;
-  transition: transform 0.3s ease;
-}
-
-.scroll-to-top:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(255, 187, 0, 0.3);
-}
-
-.scroll-to-top:hover i {
-  transform: translateY(-2px);
-}
-
-/* Fade animation */
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-/* Responsive styles */
-@media (max-width: 480px) {
-  .scroll-to-top {
-    bottom: 90px;
-    right: 15px;
-    width: 45px;
-    height: 45px;
-    padding: 8px;
   }
 }
 </style>

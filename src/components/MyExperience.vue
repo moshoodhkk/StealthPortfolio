@@ -46,7 +46,7 @@
             <span class="timeline-dates">Oct - Feb 2025 </span>
             <div class="timeline-circle"></div>
             <div class="timeline-content">
-              <p class="timeline-title">JavaScript</p>
+              <p class="timeline-title">JavaScript, Vite + Vue</p>
               <p class="timeline-info">
                 As a Junior Web Developer with JavaScript, I have immersed
                 myself in web and app development, working with experienced

@@ -35,6 +35,18 @@
     <section id="footer">
       <FooterSectionVue />
     </section>
+
+    <!-- Scroll to top button -->
+    <transition name="fade">
+      <button
+        v-show="showScrollButton"
+        @click="scrollToTop"
+        class="scroll-to-top"
+        aria-label="Scroll to top"
+      >
+        <i class="bi bi-arrow-up"></i>
+      </button>
+    </transition>
   </div>
 </template>
 
@@ -60,6 +72,11 @@ export default {
     ContactUs,
     FooterSectionVue,
   },
+  data() {
+    return {
+      showScrollButton: false,
+    };
+  },
   methods: {
     scrollToSection(sectionId) {
       const element = document.getElementById(sectionId);
@@ -67,6 +84,24 @@ export default {
         element.scrollIntoView({ behavior: "smooth" });
       }
     },
+    scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    },
+    handleScroll() {
+      const totalHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+      const threshold = totalHeight * 0.09;
+      this.showScrollButton = window.scrollY > threshold;
+    },
+  },
+  mounted() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  beforeUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
   },
 };
 </script>
@@ -79,5 +114,62 @@ export default {
 
 section {
   scroll-margin-top: 80px;
+}
+
+/* Scroll to top button styles */
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(255, 187, 0, 0.2);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.scroll-to-top i {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 187, 0, 0.3);
+}
+
+.scroll-to-top:hover i {
+  transform: translateY(-2px);
+}
+
+/* Fade animation - updated for smoother transition */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+/* Responsive styles */
+@media (max-width: 480px) {
+  .scroll-to-top {
+    bottom: 70px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
+    padding: 8px;
+  }
 }
 </style>

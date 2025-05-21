@@ -60,17 +60,17 @@ export default {
       projects: [
         {
           type: "Landing Page",
-          title: "Advertising Service",
+          title: "Resume Service",
           description:
-            "The most powerful software & app landing page for any kind of app and software marketing business.",
+            "Discover, design, and land the job. Your go-to resume service for creating standout resumes that open doors.",
           image: require("../assets/asset19.png"),
           class: "advertising-solution",
         },
         {
           type: "Landing Page",
-          title: "Trading Service",
+          title: "Interior Design Service",
           description:
-            "The most powerful software & app landing page for any kind of app and software marketing business.",
+            "Explore, choose, and create the ultimate interior design platform to find your style and bring it to life.",
           image: require("../assets/asset21.png"),
           class: "trading-platform",
         },

@@ -55,14 +55,23 @@
     </div>
 
     <div class="brands-wrapper">
-      <div class="brands-container">
-        <div class="brands-content">
-          <img src="../assets/asset7.png" class="brand brand1" alt="" />
-          <img src="../assets/asset8.png" class="brand brand2" alt="" />
-          <img src="../assets/asset9.png" class="brand brand3" alt="" />
-          <img src="../assets/asset10.png" class="brand brand4" alt="" />
-          <img src="../assets/asset11.png" class="brand brand5" alt="" />
-        </div>
+      <div class="brands-content">
+        <span>*** LET'S TALK ***</span>
+        <span>*** LET'S TALK ***</span>
+        <span>*** LET'S TALK ***</span>
+        <span>*** LET'S TALK ***</span>
+        <span>*** LET'S TALK ***</span>
+        <span>*** LET'S TALK ***</span>
+        <span>*** LET'S TALK ***</span>
+        <span>*** LET'S TALK ***</span>
+        <span>*** LET'S TALK ***</span>
+        <span>*** LET'S TALK ***</span>
+        <span>*** LET'S TALK ***</span>
+        <span>*** LET'S TALK ***</span>
+        <span>*** LET'S TALK ***</span>
+        <span>*** LET'S TALK ***</span>
+        <span>*** LET'S TALK ***</span>
+        <span>*** LET'S TALK ***</span>
       </div>
     </div>
   </div>
@@ -212,9 +221,40 @@ export default {
   }
 }
 
-.hero-buton button:hover img {
-  width: 40px;
+/* Scroll to bottom button styles */
+.scroll-to-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: hsl(0 0% 10%);
+  border: none;
+  color: white;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  text-decoration: none;
+}
+
+.scroll-to-bottom i {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.scroll-to-bottom:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  background-color: hsl(0 0% 15%);
+}
+
+.scroll-to-bottom:hover i {
+  transform: translateY(2px);
 }
 
 .profession-image {
@@ -262,8 +302,6 @@ export default {
   z-index: 100;
   width: 100%;
   height: auto;
-  /* bottom: -15px; */
-  /* left: -9%; */
 }
 
 .profession-details {
@@ -293,111 +331,61 @@ export default {
   margin: 0 0.2rem 0.4rem 0;
 }
 
-/* Scroll to bottom button styles */
-.scroll-to-bottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  background-color: hsl(0 0% 10%);
-  border: none;
-  color: white;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-  z-index: 1000;
-  text-decoration: none;
-}
-
-.scroll-to-bottom i {
-  font-size: 1.2rem;
-  transition: transform 0.3s ease;
-}
-
-.scroll-to-bottom:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-  background-color: hsl(0 0% 15%);
-}
-
-.scroll-to-bottom:hover i {
-  transform: translateY(2px);
-}
-
-/* Remove old scroll icon styles */
-.scroll-icon {
-  display: none;
-}
-
-/* Responsive styles for scroll button */
-@media (max-width: 768px) {
-  .scroll-to-bottom {
-    bottom: -10px;
-    width: 40px;
-    height: 40px;
-  }
-
-  .scroll-to-bottom i {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .scroll-to-bottom {
-    display: none;
-  }
-}
-
 /* brands */
 .brands-wrapper {
   margin-top: 3rem;
+  width: 100%;
+  overflow: hidden;
   background-color: var(--secondary-color);
-  padding: 20px 0;
-  height: 90px;
+  padding: 30px 0;
+  position: relative;
 }
 
-.brands-container {
-  position: relative;
-  width: 85%;
-  margin: 0 auto;
+.brands-wrapper::before,
+.brands-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 200px;
   height: 100%;
-  overflow: hidden;
-  padding: 2px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.brands-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, var(--secondary-color), transparent);
+}
+
+.brands-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, var(--secondary-color), transparent);
 }
 
 .brands-content {
-  width: 100%;
-  top: 0;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  position: absolute;
-  animation: brand 20s linear infinite;
+  gap: 4.5rem;
+  width: max-content;
+  animation: slideText 20s linear infinite;
+  font-size: 17px;
+  color: #fff;
+  white-space: nowrap;
+  font-family: "Roboto Slab", serif;
+  position: relative;
+  z-index: 1;
 }
 
-.brand {
-  width: 100px;
+.brands-content span {
+  display: inline-block;
 }
 
-.brand1 {
-  width: 120px;
-}
-
-.brand5 {
-  width: 120px;
-}
-
-@keyframes brand {
-  from {
-    transform: translateX(100%);
+@keyframes slideText {
+  0% {
+    transform: translateX(0);
   }
-  to {
-    transform: translateX(-100%);
+  100% {
+    transform: translateX(-50%);
   }
 }
 
@@ -419,9 +407,9 @@ export default {
   }
   .pencil-draw {
     position: absolute;
-    width: 3.8rem;
-    left: -7%;
-    bottom: 20%;
+    width: 5.3rem;
+    left: -9%;
+    bottom: 10%;
     z-index: 200;
   }
 
@@ -450,7 +438,6 @@ export default {
   .hero-buton {
     display: flex;
     align-items: center;
-    gap: 20px;
   }
 
   .hero-buton button {
@@ -462,11 +449,6 @@ export default {
     border: none;
     cursor: pointer;
     font-size: 12.5px;
-  }
-
-  .hero-buton img {
-    width: 40px;
-    cursor: pointer;
   }
 
   .profession-image {
@@ -517,10 +499,10 @@ export default {
   .profile-image {
     position: absolute;
     z-index: 100;
-    width: 115%;
+    width: 100%;
     height: auto;
-    bottom: -15px;
-    left: -9%;
+    bottom: -35;
+    left: 0%;
   }
 
   .profession-details {
@@ -551,50 +533,41 @@ export default {
   }
 
   /* brands */
+  .brands-wrapper::before,
+  .brands-wrapper::after {
+    width: 100px;
+  }
   .brands-wrapper {
     margin-top: 3rem;
-    background-color: var(--secondary-color);
-    padding: 20px 0;
-    height: 90px;
-  }
-
-  .brands-container {
-    position: relative;
-    width: 85%;
-    margin: 0 auto;
-    height: 100%;
+    width: 100%;
     overflow: hidden;
-    padding: 2px;
+    background-color: var(--secondary-color);
+    padding: 25px 0;
+    position: relative;
   }
 
   .brands-content {
-    width: 100%;
-    top: 0;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    position: absolute;
-    animation: brand 20s linear infinite;
+    gap: 4.5rem;
+    width: max-content;
+    animation: slideText 20s linear infinite;
+    font-size: 16px;
+    color: #fff;
+    white-space: nowrap;
+    font-family: "Roboto Slab", serif;
   }
 
-  .brand {
-    width: 100px;
+  .brands-content span {
+    display: inline-block;
   }
 
-  .brand1 {
-    width: 120px;
-  }
-
-  .brand5 {
-    width: 120px;
-  }
-
-  @keyframes brand {
-    from {
-      transform: translateX(100%);
+  @keyframes slideText {
+    0% {
+      transform: translateX(0);
     }
-    to {
-      transform: translateX(-100%);
+    100% {
+      transform: translateX(-50%);
     }
   }
 }
@@ -649,7 +622,6 @@ export default {
   .hero-buton {
     display: flex;
     align-items: center;
-    gap: 18px;
   }
 
   .hero-buton button {
@@ -661,11 +633,6 @@ export default {
     border: none;
     cursor: pointer;
     font-size: 17px;
-  }
-
-  .hero-buton img {
-    width: 34px;
-    cursor: pointer;
   }
 
   .profession-image {
@@ -745,56 +712,47 @@ export default {
     margin: 0 0.2rem 0.4rem 0;
   }
 
-  .scroll-icon {
-    display: none;
-  }
-
   /* brands */
+  .brands-wrapper::before,
+  .brands-wrapper::after {
+    width: 80px;
+  }
   .brands-wrapper {
     margin-top: 3rem;
-    background-color: var(--secondary-color);
-    padding: 20px 0;
-    height: 90px;
-  }
-
-  .brands-container {
-    position: relative;
-    width: 85%;
-    margin: 0 auto;
-    height: 100%;
+    width: 100%;
     overflow: hidden;
-    padding: 2px;
+    background-color: var(--secondary-color);
+    padding: 25px 0;
+    position: relative;
   }
 
   .brands-content {
-    width: 100%;
-    top: 0;
     display: flex;
-    gap: 25px;
     align-items: center;
-    position: absolute;
-    animation: brand 20s linear infinite;
+    gap: 4.5rem;
+    width: max-content;
+    animation: slideText 20s linear infinite;
+    font-size: 16px;
+    color: #fff;
+    white-space: nowrap;
+    font-family: "Roboto Slab", serif;
   }
 
-  .brand {
-    width: 85px;
+  .brands-content span {
+    display: inline-block;
   }
 
-  .brand1 {
-    width: 110px;
-  }
-
-  .brand5 {
-    width: 110px;
-  }
-
-  @keyframes brand {
-    from {
-      transform: translateX(100%);
+  @keyframes slideText {
+    0% {
+      transform: translateX(0);
     }
-    to {
-      transform: translateX(-100%);
+    100% {
+      transform: translateX(-50%);
     }
+  }
+
+  .scroll-to-bottom {
+    display: none;
   }
 }
 
@@ -834,7 +792,7 @@ export default {
     width: 100%;
     max-width: 400px;
     height: 80px;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     margin-top: 1.3rem;
     margin-bottom: 0rem;
   }
@@ -850,7 +808,6 @@ export default {
   .hero-buton {
     display: flex;
     align-items: center;
-    gap: 20px;
   }
 
   .hero-buton button {
@@ -862,11 +819,6 @@ export default {
     border: none;
     cursor: pointer;
     font-size: 13px;
-  }
-
-  .hero-buton img {
-    width: 35px;
-    cursor: pointer;
   }
 
   .profession-image {
@@ -948,50 +900,46 @@ export default {
   }
 
   /* brands */
+  .brands-wrapper::before,
+  .brands-wrapper::after {
+    width: 60px;
+  }
   .brands-wrapper {
     margin-top: 3rem;
-    background-color: var(--secondary-color);
-    padding: 20px 0;
-    height: 90px;
-  }
-
-  .brands-container {
-    position: relative;
     width: 100%;
-    margin: 0 auto;
-    height: 100%;
     overflow: hidden;
+    background-color: var(--secondary-color);
+    padding: 25px 0;
+    position: relative;
   }
 
   .brands-content {
-    width: 100%;
-    top: 0;
     display: flex;
-    gap: 25px;
     align-items: center;
-    position: absolute;
-    animation: brand 30s linear infinite;
+    gap: 4.5rem;
+    width: max-content;
+    animation: slideText 20s linear infinite;
+    font-size: 16px;
+    color: #fff;
+    white-space: nowrap;
+    font-family: "Roboto Slab", serif;
   }
 
-  .brand {
-    width: 80px;
+  .brands-content span {
+    display: inline-block;
   }
 
-  .brand1 {
-    width: 100px;
-  }
-
-  .brand5 {
-    width: 100px;
-  }
-
-  @keyframes brand {
-    from {
-      transform: translateX(100%);
+  @keyframes slideText {
+    0% {
+      transform: translateX(0);
     }
-    to {
-      transform: translateX(-100%);
+    100% {
+      transform: translateX(-50%);
     }
+  }
+
+  .scroll-to-bottom {
+    display: none;
   }
 }
 
@@ -1145,50 +1093,46 @@ export default {
   }
 
   /* brands */
+  .brands-wrapper::before,
+  .brands-wrapper::after {
+    width: 50px;
+  }
   .brands-wrapper {
     margin-top: 3rem;
-    background-color: var(--secondary-color);
-    padding: 20px 0;
-    height: 90px;
-  }
-
-  .brands-container {
-    position: relative;
     width: 100%;
-    margin: 0 auto;
-    height: 100%;
     overflow: hidden;
+    background-color: var(--secondary-color);
+    padding: 25px 0;
+    position: relative;
   }
 
   .brands-content {
-    width: 100%;
-    top: 0;
     display: flex;
-    gap: 25px;
     align-items: center;
-    position: absolute;
-    animation: brand 30s linear infinite;
+    gap: 4.5rem;
+    width: max-content;
+    animation: slideText 20s linear infinite;
+    font-size: 16px;
+    color: #fff;
+    white-space: nowrap;
+    font-family: "Roboto Slab", serif;
   }
 
-  .brand {
-    width: 80px;
+  .brands-content span {
+    display: inline-block;
   }
 
-  .brand1 {
-    width: 100px;
-  }
-
-  .brand5 {
-    width: 100px;
-  }
-
-  @keyframes brand {
-    from {
-      transform: translateX(100%);
+  @keyframes slideText {
+    0% {
+      transform: translateX(0);
     }
-    to {
-      transform: translateX(-100%);
+    100% {
+      transform: translateX(-50%);
     }
+  }
+
+  .scroll-to-bottom {
+    display: none;
   }
 }
 </style>
