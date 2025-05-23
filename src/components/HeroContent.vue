@@ -50,7 +50,8 @@
         class="scroll-to-bottom"
         aria-label="Scroll to footer"
       >
-        <i class="bi bi-arrow-down"></i>
+        <!-- <i class="fa-solid fa-chevron-down"></i> -->
+        <img src="../assets/scrolldown.png" alt="">
       </a>
     </div>
 
@@ -226,8 +227,8 @@ export default {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 45px;
-  height: 45px;
+  width: 43px;
+  height: 43px;
   border-radius: 50%;
   background-color: hsl(0 0% 10%);
   border: none;
@@ -242,8 +243,8 @@ export default {
   text-decoration: none;
 }
 
-.scroll-to-bottom i {
-  font-size: 1.2rem;
+.scroll-to-bottom img {
+  width: 12px;
   transition: transform 0.3s ease;
 }
 
@@ -253,7 +254,7 @@ export default {
   background-color: hsl(0 0% 15%);
 }
 
-.scroll-to-bottom:hover i {
+.scroll-to-bottom:hover img {
   transform: translateY(2px);
 }
 

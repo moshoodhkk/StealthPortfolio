@@ -44,7 +44,8 @@
         class="scroll-to-top"
         aria-label="Scroll to top"
       >
-        <i class="bi bi-arrow-up"></i>
+        <!-- <i class="bi bi-arrow-up"></i> -->
+        <img src="../assets/scrolltop.png" alt="">
       </button>
     </transition>
   </div>
@@ -136,8 +137,8 @@ section {
   z-index: 1000;
 }
 
-.scroll-to-top i {
-  font-size: 1.2rem;
+.scroll-to-top img {
+  width: 12px;
   transition: transform 0.3s ease;
 }
 

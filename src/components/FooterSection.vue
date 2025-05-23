@@ -49,9 +49,26 @@
     <div class="footer-socials">
       <p>©2025 Moshood. All rights reserved.</p>
       <div class="socials">
-        <i class="fa-brands fa-linkedin-in"></i>
-        <i class="fa-brands fa-github"></i>
-        <i class="fa-brands fa-instagram"></i>
+        <a
+          :href="socialLinks.linkedin"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a :href="socialLinks.github" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a
+          :href="socialLinks.instagram"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a :href="socialLinks.tiktok" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
       </div>
     </div>
   </div>
@@ -60,6 +77,16 @@
 <script>
 export default {
   name: "FooterSection",
+  data() {
+    return {
+      socialLinks: {
+        linkedin: "https://www.linkedin.com/in/kazeem-moshood-411ba2333",
+        github: "https://github.com/moshoodhkk",
+        instagram: "https://www.instagram.com/stealth.dev?igsh=MWt5dmQ0a2UxeGM5bA%3D%3D&utm_source=qr",
+        tiktok: "https://www.tiktok.com/@stealth_dev2?_t=ZM-8wXduPdXazQ&_r=1",
+      },
+    };
+  },
   methods: {
     scrollToSection(sectionId) {
       const element = document.getElementById(sectionId);
@@ -205,11 +232,17 @@ li:hover {
   align-items: center;
 }
 
+.socials a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .socials i {
   font-size: 15px;
   padding: 7px 7.7px;
   border-radius: 50%;
   transition: 0.3s;
+  display: inline-block;
 }
 
 .socials i:hover {

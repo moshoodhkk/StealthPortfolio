@@ -26,10 +26,16 @@
               {{ project.description }}
             </p>
 
-            <div class="visit-site">
+            <a
+              :href="project.link"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="visit-site"
+              @click="project.link ? null : $event.preventDefault()"
+            >
               <p>Visit Site</p>
               <i class="bi bi-arrow-up-right"></i>
-            </div>
+            </a>
           </div>
 
           <div class="project-image">
@@ -65,6 +71,7 @@ export default {
             "Discover, design, and land the job. Your go-to resume service for creating standout resumes that open doors.",
           image: require("../assets/asset19.png"),
           class: "advertising-solution",
+          link: "https://resume-alchemy-builder.vercel.app/",
         },
         {
           type: "Landing Page",
@@ -73,6 +80,7 @@ export default {
             "Explore, choose, and create the ultimate interior design platform to find your style and bring it to life.",
           image: require("../assets/asset21.png"),
           class: "trading-platform",
+          link: "https://furniture-five-vert.vercel.app/",
         },
         {
           type: "Landing Page",
@@ -81,6 +89,7 @@ export default {
             "The most powerful software & app landing page for any kind of app and software marketing business.",
           image: require("../assets/asset20.png"),
           class: "art-design",
+          link: "",
         },
         {
           type: "Web Application",
@@ -89,6 +98,7 @@ export default {
             "A comprehensive e-commerce solution with advanced features for online shopping and payment processing.",
           image: require("../assets/asset19.png"),
           class: "ecommerce-platform",
+          link: "",
         },
         {
           type: "Mobile App",
@@ -97,6 +107,7 @@ export default {
             "A mobile application for tracking workouts, nutrition, and health metrics with real-time analytics.",
           image: require("../assets/asset21.png"),
           class: "fitness-tracker",
+          link: "",
         },
       ],
     };
@@ -201,17 +212,23 @@ export default {
   gap: 0.8rem;
   cursor: pointer;
   transition: 0.5s ease-in-out;
+  background-color: hsl(0 0% 10%);
+  color: #ffff;
+  padding: 0.6rem 1.7rem;
+  border-radius: 30px;
+  width: fit-content;
+  text-decoration: none;
 }
 
 .visit-site p {
-  font-size: 14.5px;
-  color: hsl(0 0% 10%);
+  font-size: 13px;
+  color: hsl(0 0% 100%);
   font-weight: 500;
 }
 
 .visit-site i {
-  font-size: 14.5px;
-  color: hsl(0 0% 10%);
+  font-size: 14px;
+  color: hsl(0 0% 100%);
 }
 
 .visit-site:hover i {
